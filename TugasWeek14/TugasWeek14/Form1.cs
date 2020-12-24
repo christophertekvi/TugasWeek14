@@ -54,6 +54,7 @@ namespace TugasWeek14
 
                         output += input[i];
 
+                        //biar ga ada spasi
                         input[i] = 'a';
 
 
@@ -61,7 +62,8 @@ namespace TugasWeek14
                     if (input[i] == ' ')
                     {
                         output += " ";
-                        input[i] = ' ';
+                        //biar ada spasi
+                        input[i] = 'a';
                     }
                 }
             }
