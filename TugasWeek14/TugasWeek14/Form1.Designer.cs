@@ -111,7 +111,7 @@ namespace TugasWeek14
             // labelOutput
             // 
             this.labelOutput.AutoSize = true;
-            this.labelOutput.Location = new System.Drawing.Point(84, 195);
+            this.labelOutput.Location = new System.Drawing.Point(93, 180);
             this.labelOutput.Name = "labelOutput";
             this.labelOutput.Size = new System.Drawing.Size(0, 13);
             this.labelOutput.TabIndex = 8;
