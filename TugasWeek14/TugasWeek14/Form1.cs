@@ -19,34 +19,61 @@ namespace TugasWeek14
 
         private void buttonconvert_Click(object sender, EventArgs e)
         {
-            string[] alphabet = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", 
-                "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
+            textBoxInput.CharacterCasing = CharacterCasing.Upper;
+
+            char[] input = textBoxInput.Text.ToCharArray();
+            string output = " ";
+
+            char[] huruf1 = textBoxhuruf1.Text.ToCharArray();
+            char no1 = Convert.ToChar(textBoxhuruf1.Text); 
+
+            char[] huruf2 = textBoxhuruf2.Text.ToCharArray();
+            char no2 = huruf2[0];
+
+            string huruf = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            char[] hurufurut = huruf.ToCharArray();
+
+            int selisih = no2 - no1;
+            if (selisih < 0)
+            {
+                selisih += 26;
+            }
+
+            for (int i = 0; i < textBoxInput.Text.Length; i++)
+            {
+                for (int j = 0; j < 26; j++)
+                {
+                    if (hurufurut[j] == input[i])
+                    {
+                        int reset = j + selisih;
+                        if (reset >= 26)
+                        {
+                            reset -= 26;
+                        }
+                        input[i] = hurufurut[reset];
+
+                        output += input[i];
+
+                        input[i] = 'a';
+
+
+                    }
+                    if (input[i] == ' ')
+                    {
+                        output += " ";
+                        input[i] = ' ';
+                    }
+                }
+            }
+
+            labelOutput.Text = output;
             
-
-            string[] input = new string[textBoxInput.Text.Length];
-
-            for (int i = 0; i < textBoxInput.Text.Length; i++)
-            {
-                input[i] = textBoxInput.Text.Substring(i, 1);
-            }
-
-
-            char[] output = new char[textBoxInput.Text.Length];
-
-            for (int i = 0; i < textBoxInput.Text.Length; i++)
-            {
-                output[i] = Convert.ToChar(input[i]);
-            }
-
-            string output2 = new string(output);
-
-            labelOutput.Text = output2;
-
         }
 
         private void buttonKeluh_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Tolong aku ga ngerti quiz pandaaa!!");
+            MessageBox.Show("MERRY CHRISTMAS AND HAPPY NEW YEAR :) " +
+                "LAIN KALI KALO LIBURAN JANGAN SUSAH SUSAH TUGASNYAAA");
         }
     }
 }

@@ -29,6 +29,7 @@ namespace TugasWeek14
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQuiz));
             this.labelkalimat = new System.Windows.Forms.Label();
             this.textBoxInput = new System.Windows.Forms.TextBox();
             this.labelhuruf1 = new System.Windows.Forms.Label();
@@ -141,6 +142,7 @@ namespace TugasWeek14
             this.Controls.Add(this.labelhuruf1);
             this.Controls.Add(this.textBoxInput);
             this.Controls.Add(this.labelkalimat);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormQuiz";
             this.Text = "Quiz Panda";
             this.ResumeLayout(false);
